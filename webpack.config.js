@@ -28,7 +28,7 @@ module.exports = (env) => {
     plugins: [
       new webpack.DllReferencePlugin({
         context: __dirname,
-        manifest: require('./src/main/resources/webroot/dist/vendor2-manifest.json')
+        manifest: require('./src/main/resources/webroot/dist/vendor-manifest.json')
       })
     ].concat(isDevBuild ? [
       // Plugins that apply in development builds only
@@ -37,7 +37,7 @@ module.exports = (env) => {
         moduleFilenameTemplate: path.relative(bundleOutputDir, '[resourcePath]') // Point sourcemap entries to the original file locations on disk
       }),
       new VertxPlugin({
-        fatJar: 'target/vertx-0.0.1-SNAPSHOT-fat.jar'
+        fatJar: 'target/vertx.jar'
       })
     ] : [
       // Plugins that apply in production builds only
