@@ -37,7 +37,7 @@ module.exports = (env) => {
         moduleFilenameTemplate: path.relative(bundleOutputDir, '[resourcePath]') // Point sourcemap entries to the original file locations on disk
       }),
       new VertxPlugin({
-        fatJar: 'target/vertx.jar'
+        fatJar: 'target/vertx-0.0.1-SNAPSHOT-fat.jar'
       })
     ] : [
       // Plugins that apply in production builds only
