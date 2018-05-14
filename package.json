@@ -1,0 +1,9 @@
+{
+  "name": "Vertx app",
+  "version": "0.0.1-SNAPSHOT",
+  "description": "A template for vert.x app with ReactJS",
+  "private": true,
+
+  "devDependencies": {
+  }
+}
